@@ -1,19 +1,12 @@
-import './App.css'
-import { Button } from "@/components/ui/button"
-import Navbar from "../src/appcomponents/Navbar.jsx"
-import Hero from './appcomponents/Hero.jsx'
+import "./App.css";
+
+import { RouterProvider } from "react-router-dom";
+import appRouter from "./routes";
 
 function App() {
-
   return (
-    <>
-     <div>
-      <Navbar />
-      <Hero />
-     
-     </div>
-    </>
-  )
+    <RouterProvider router={appRouter} />
+  );
 }
 
-export default App
+export default App;
