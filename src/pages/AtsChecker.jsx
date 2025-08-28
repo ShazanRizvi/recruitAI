@@ -44,6 +44,9 @@ const AtsChecker = () => {
         </HoverBorderGradient>
       </div>
       <div>
+        <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
+        The road to freedom starts from here
+      </p>
         <div className="flex flex-col items-center justify-center">
           <TypewriterEffectSmooth words={words} />
           
