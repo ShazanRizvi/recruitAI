@@ -40,18 +40,7 @@ const Navbar = () => {
               </Button>
               </NavLink>
             </li>
-            <li className="text-lg font-semibold">
-              
-              <Button
-                onClick={() => {
-                  alert("Sign in clicked");
-                }}
-                variant="filled"
-                className="text-black bg-white font-mono border-1 border-black rounded-full hover:text-white hover:bg-blue-500 hover:border-none cursor-pointer"
-              >
-                Get Started!
-              </Button>
-            </li>
+           
           </ul>
         </div>
       

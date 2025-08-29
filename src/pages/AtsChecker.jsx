@@ -1,36 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import { BrainCircuit } from "lucide-react";
 import { HoverBorderGradient } from "../components/ui/hover-border-gradient";
 import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
+import { TextGenerateEffect } from "../components/ui/text-generate-effect";
+import { wordsfortypewrite, wordsfortextgenerate } from "../assets/Constants";
+import { FileUpload } from "@/components/ui/file-upload"
+
 
 const AtsChecker = () => {
-  const words = [
-    {
-      text: "Smart",
-    },
-    {
-      text: "Resume",
-    },
-    {
-      text: "Check",
-    },
-    {
-      text: "Fast",
-    },
-     {
-      text: "and",
-    },
-     {
-      text: "free",
-    },
-     {
-      text: "with",
-    },
-    {
-      text: "recruit AI.",
-      className: "text-blue-500 dark:text-blue-500",
-    },
-  ];
+  const [file, setFile] = useState(null);
+  const handleFileUpload = (uploadedFile) => {
+    setFile(uploadedFile);
+    console.log(file);
+  }
+
   return (
     <div>
       <div className="mt-10 flex justify-center text-center">
@@ -44,13 +27,16 @@ const AtsChecker = () => {
         </HoverBorderGradient>
       </div>
       <div>
-        <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
-        The road to freedom starts from here
-      </p>
-        <div className="flex flex-col items-center justify-center">
-          <TypewriterEffectSmooth words={words} />
-          
+        <div className="flex flex-col items-center justify-center mt-10">
+          <TypewriterEffectSmooth words={wordsfortypewrite} />
+          <div className="text-neutral-400 dark:text-neutral-200 text-xs sm:text-base">
+            <TextGenerateEffect words={wordsfortextgenerate} />
+          </div>
         </div>
+      </div>
+      <div className="flex justify-center mt-20"> 
+        <FileUpload onFileUpload={handleFileUpload} />
+
       </div>
     </div>
   );
