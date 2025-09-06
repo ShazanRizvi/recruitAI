@@ -5,6 +5,7 @@ import PublicHomepage from "../pages/PublicHomepage.jsx";
 import AtsChecker from "../pages/AtsChecker.jsx";
 import LinkdlnAuto from "../pages/LinkdlnAuto.jsx";
 import Dashboard from "../pages/Dashboard.jsx";
+import AtsScore from "../pages/AtsScore.jsx";
 
 const appRouter = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard />,
+      },
+       {
+        path: "/ats_score",
+        element: <AtsScore />,
       }
     ],
   },

@@ -49,5 +49,31 @@ export const wordsforHero = [
 export const wordsfortextgenerate =
   "Fix errors, improve keywords and boost your chances of getting hired!";
 
+export const loadingStates = [
+  {
+    text: "Buying a condo",
+  },
+  {
+    text: "Travelling in a flight",
+  },
+  {
+    text: "Meeting Tyler Durden",
+  },
+  {
+    text: "He makes soap",
+  },
+  {
+    text: "We goto a bar",
+  },
+  {
+    text: "Start a fight",
+  },
+  {
+    text: "We like it",
+  },
+  {
+    text: "Welcome to F**** C***",
+  },
+];
 
   export const apiBaseUrl = import.meta.env.VITE_API_BASE_URL; // Update this to your backend URL
